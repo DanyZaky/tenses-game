@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
@@ -27,5 +28,10 @@ public class MainMenuManager : MonoBehaviour
         }
 
         nameText.text = nameInput.text;
+    }
+
+    public void PlayButton()
+    {
+        SceneManager.LoadScene(1);
     }
 }
