@@ -496,6 +496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 38864932}
   - component: {fileID: 38864933}
+  - component: {fileID: 38864934}
   m_Layer: 5
   m_Name: Soal (15)
   m_TagString: Untagged
@@ -533,6 +534,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38864931}
   m_CullTransparentMesh: 1
+--- !u!114 &38864934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38864931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 645433464}
+  - {fileID: 944287358}
+  - {fileID: 1742194055}
+  - {fileID: 1591854029}
 --- !u!1 &54082024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 77202158}
   - component: {fileID: 77202159}
+  - component: {fileID: 77202160}
   m_Layer: 5
   m_Name: Soal (5)
   m_TagString: Untagged
@@ -1265,6 +1284,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77202157}
   m_CullTransparentMesh: 1
+--- !u!114 &77202160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77202157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 2084725721}
+  - {fileID: 1912522991}
+  - {fileID: 702984144}
+  - {fileID: 2072457394}
 --- !u!1 &85983385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 85983386}
   - component: {fileID: 85983387}
+  - component: {fileID: 85983388}
   m_Layer: 5
   m_Name: Soal (12)
   m_TagString: Untagged
@@ -1312,6 +1349,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85983385}
   m_CullTransparentMesh: 1
+--- !u!114 &85983388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85983385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 2122587041}
+  - {fileID: 1472585381}
+  - {fileID: 1641089866}
+  - {fileID: 1747049994}
 --- !u!1 &86128003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,7 +2798,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 168623158}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1933911462}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &168623158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3204,6 +3270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201182778}
   - component: {fileID: 201182779}
+  - component: {fileID: 201182780}
   m_Layer: 5
   m_Name: Soal (6)
   m_TagString: Untagged
@@ -3243,6 +3310,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201182777}
   m_CullTransparentMesh: 1
+--- !u!114 &201182780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201182777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 1721902309}
+  - {fileID: 988416651}
+  - {fileID: 1860994162}
+  - {fileID: 536610468}
 --- !u!1 &204597059
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,6 +6109,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357599504}
   m_CullTransparentMesh: 1
+--- !u!1 &358001015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358001016}
+  - component: {fileID: 358001019}
+  - component: {fileID: 358001018}
+  - component: {fileID: 358001017}
+  m_Layer: 5
+  m_Name: PrevButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &358001016
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358001015}
+  m_LocalRotation: {x: -0, y: -0, z: 0.99983436, w: -0.018201815}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1905911702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 182.086}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 143, y: 154}
+  m_SizeDelta: {x: 169.57117, y: 201.3658}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &358001017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358001015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 358001018}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1082313166}
+        m_TargetAssemblyTypeName: SoalHandler, Assembly-CSharp
+        m_MethodName: PrevSoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &358001018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358001015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: afa839151b481134484087a27fc2c3fa, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &358001019
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358001015}
+  m_CullTransparentMesh: 1
 --- !u!1 &358511340
 GameObject:
   m_ObjectHideFlags: 0
@@ -6665,7 +6881,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 381494801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 718628159}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &381494801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7228,7 +7456,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 424345297}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1933911462}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &424345297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8366,7 +8606,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 533415036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923162267}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &533415036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8488,7 +8740,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 536065880}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1196461605}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &536065880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8610,7 +8874,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 536610469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201182780}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &536610469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8732,7 +9008,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 539789096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1959672309}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &539789096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10671,7 +10959,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 645433465}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38864934}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &645433465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11282,7 +11582,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 702984145}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 77202160}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &702984145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11587,6 +11899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718628157}
   - component: {fileID: 718628158}
+  - component: {fileID: 718628159}
   m_Layer: 5
   m_Name: Soal (4)
   m_TagString: Untagged
@@ -11626,6 +11939,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718628156}
   m_CullTransparentMesh: 1
+--- !u!114 &718628159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718628156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 1792246752}
+  - {fileID: 1650342008}
+  - {fileID: 1386371133}
+  - {fileID: 381494800}
 --- !u!1 &721623791
 GameObject:
   m_ObjectHideFlags: 0
@@ -11709,7 +12039,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 721623794}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 811086297}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &721623794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12185,7 +12527,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 746912636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2074104192}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &746912636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12518,7 +12872,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 755067245}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775641208}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &755067245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13444,7 +13810,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 788052695}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1196461605}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &788052695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13690,7 +14068,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 800493369}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2074104192}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &800493369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14626,6 +15016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811086295}
   - component: {fileID: 811086296}
+  - component: {fileID: 811086297}
   m_Layer: 5
   m_Name: Soal (14)
   m_TagString: Untagged
@@ -14663,6 +15054,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811086294}
   m_CullTransparentMesh: 1
+--- !u!114 &811086297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811086294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 721623793}
+  - {fileID: 1790164517}
+  - {fileID: 1396722526}
+  - {fileID: 2128752263}
 --- !u!1 &811764207
 GameObject:
   m_ObjectHideFlags: 0
@@ -16352,6 +16760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 923162265}
   - component: {fileID: 923162266}
+  - component: {fileID: 923162267}
   m_Layer: 5
   m_Name: Soal (13)
   m_TagString: Untagged
@@ -16389,6 +16798,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923162264}
   m_CullTransparentMesh: 1
+--- !u!114 &923162267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923162264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 1194350431}
+  - {fileID: 938197310}
+  - {fileID: 1487481851}
+  - {fileID: 533415035}
 --- !u!1 &923861618
 GameObject:
   m_ObjectHideFlags: 0
@@ -16951,7 +17377,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 938197311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923162267}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &938197311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17329,7 +17767,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 944287359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38864934}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &944287359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18484,7 +18934,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 988416652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201182780}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &988416652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19119,7 +19581,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 997496736}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1933911462}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &997496736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19550,7 +20024,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1005929296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2074104192}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1005929296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21324,6 +21810,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e1f46393cf240458664336a0314fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextButton: {fileID: 1788950540}
+  prevButton: {fileID: 358001015}
+  soalDisplay:
+  - {fileID: 1196461602}
+  - {fileID: 1775641205}
+  - {fileID: 2074104189}
+  - {fileID: 718628156}
+  - {fileID: 77202157}
+  - {fileID: 201182777}
+  - {fileID: 1522887921}
+  - {fileID: 1095015186}
+  - {fileID: 797100685}
+  - {fileID: 1933911459}
+  - {fileID: 1959672306}
+  - {fileID: 85983385}
+  - {fileID: 923162264}
+  - {fileID: 811086294}
+  - {fileID: 38864931}
   kunciLevel3:
   - C
   - B
@@ -21351,7 +21855,19 @@ MonoBehaviour:
   - 
   - 
   - 
+  currentJawaban:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   soalIndex: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  currentIndex: 0
 --- !u!1 &1095015186
 GameObject:
   m_ObjectHideFlags: 0
@@ -21673,8 +22189,8 @@ MonoBehaviour:
 
     And my daddy said, "Stay away from Juliet"
 
-    But you ______
-    everything to me
+    But you ______ everything
+    to me
 
     I was begging you, "Please don''t go"
 
@@ -22455,7 +22971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1137138306}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1959672309}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1137138306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23111,7 +23639,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1167339771}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1959672309}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1167339771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23635,7 +24175,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1194350432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923162267}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1194350432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23684,6 +24236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1196461603}
   - component: {fileID: 1196461604}
+  - component: {fileID: 1196461605}
   m_Layer: 5
   m_Name: Soal (1)
   m_TagString: Untagged
@@ -23722,6 +24275,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196461602}
   m_CullTransparentMesh: 1
+--- !u!114 &1196461605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196461602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 2140055868}
+  - {fileID: 536065879}
+  - {fileID: 788052694}
+  - {fileID: 2116798281}
 --- !u!1 &1209096590
 GameObject:
   m_ObjectHideFlags: 0
@@ -26517,7 +27087,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1386371134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 718628159}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1386371134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26639,7 +27221,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1396722527}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 811086297}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1396722527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27927,7 +28521,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1472585382}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85983388}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1472585382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28049,7 +28655,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1475733955}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775641208}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1475733955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28171,7 +28789,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1487481852}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923162267}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1487481852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30029,7 +30659,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1591854030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38864934}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1591854030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30479,7 +31121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1629491053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1933911462}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1629491053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30735,7 +31389,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1641089867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85983388}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1641089867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30857,7 +31523,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1650342009}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 718628159}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1650342009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30979,7 +31657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1682524926}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775641208}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1682524926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32018,7 +32708,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1721902310}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201182780}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1721902310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32484,7 +33186,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1742194056}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38864934}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1742194056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32740,7 +33454,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1747049995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85983388}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1747049995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33413,6 +34139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1775641206}
   - component: {fileID: 1775641207}
+  - component: {fileID: 1775641208}
   m_Layer: 5
   m_Name: Soal (2)
   m_TagString: Untagged
@@ -33451,6 +34178,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775641205}
   m_CullTransparentMesh: 1
+--- !u!114 &1775641208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775641205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 1475733954}
+  - {fileID: 2029573533}
+  - {fileID: 1682524925}
+  - {fileID: 755067244}
 --- !u!1 &1777020840
 GameObject:
   m_ObjectHideFlags: 0
@@ -33758,6 +34502,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781204578}
   m_CullTransparentMesh: 1
+--- !u!1 &1788950540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1788950541}
+  - component: {fileID: 1788950544}
+  - component: {fileID: 1788950543}
+  - component: {fileID: 1788950542}
+  m_Layer: 5
+  m_Name: Next Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1788950541
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788950540}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1905911702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -192.98016, y: 157}
+  m_SizeDelta: {x: 169.5712, y: 201.3658}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1788950542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788950540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1788950543}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1082313166}
+        m_TargetAssemblyTypeName: SoalHandler, Assembly-CSharp
+        m_MethodName: NextSoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1788950543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788950540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: afa839151b481134484087a27fc2c3fa, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1788950544
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788950540}
+  m_CullTransparentMesh: 1
 --- !u!1 &1790164515
 GameObject:
   m_ObjectHideFlags: 0
@@ -33841,7 +34717,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1790164518}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 811086297}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1790164518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33963,7 +34851,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1792246753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 718628159}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1792246753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34997,7 +35897,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1834315245}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2074104192}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1834315245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35534,7 +36446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1860994163}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201182780}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1860994163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36246,6 +37170,8 @@ RectTransform:
   - {fileID: 705136762}
   - {fileID: 921434228}
   - {fileID: 996412416}
+  - {fileID: 1788950541}
+  - {fileID: 358001016}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -36336,7 +37262,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1912522992}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 77202160}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1912522992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36722,6 +37660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1933911460}
   - component: {fileID: 1933911461}
+  - component: {fileID: 1933911462}
   m_Layer: 5
   m_Name: Soal (10)
   m_TagString: Untagged
@@ -36759,6 +37698,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933911459}
   m_CullTransparentMesh: 1
+--- !u!114 &1933911462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933911459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 997496735}
+  - {fileID: 1629491052}
+  - {fileID: 168623157}
+  - {fileID: 424345296}
 --- !u!1 &1937337689
 GameObject:
   m_ObjectHideFlags: 0
@@ -37131,6 +38087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959672307}
   - component: {fileID: 1959672308}
+  - component: {fileID: 1959672309}
   m_Layer: 5
   m_Name: Soal (11)
   m_TagString: Untagged
@@ -37168,6 +38125,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959672306}
   m_CullTransparentMesh: 1
+--- !u!114 &1959672309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959672306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 1137138305}
+  - {fileID: 539789095}
+  - {fileID: 1167339770}
+  - {fileID: 1974367126}
 --- !u!1 &1972796657
 GameObject:
   m_ObjectHideFlags: 0
@@ -37385,7 +38359,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1974367127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1959672309}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1974367127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37871,7 +38857,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2029573534}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775641208}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2029573534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38550,7 +39548,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2072457395}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 77202160}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2072457395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38599,6 +39609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2074104190}
   - component: {fileID: 2074104191}
+  - component: {fileID: 2074104192}
   m_Layer: 5
   m_Name: Soal (3)
   m_TagString: Untagged
@@ -38637,6 +39648,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074104189}
   m_CullTransparentMesh: 1
+--- !u!114 &2074104192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074104189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c743552309dec54db014f04aa52e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerButtons:
+  - {fileID: 1834315244}
+  - {fileID: 800493368}
+  - {fileID: 1005929295}
+  - {fileID: 746912635}
 --- !u!1 &2074687378
 GameObject:
   m_ObjectHideFlags: 0
@@ -38982,7 +40010,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2084725722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 77202160}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2084725722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39300,7 +40340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2116798282}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1196461605}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2116798282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39706,7 +40758,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2122587042}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85983388}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2122587042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39962,7 +41026,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2128752264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 811086297}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanBenar
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2128752264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40218,7 +41294,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2140055869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1196461605}
+        m_TargetAssemblyTypeName: TypePilgan, Assembly-CSharp
+        m_MethodName: JawabanSalah
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2140055869
 MonoBehaviour:
   m_ObjectHideFlags: 0
