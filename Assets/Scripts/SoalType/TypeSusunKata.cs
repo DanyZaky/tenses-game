@@ -13,7 +13,7 @@ public class TypeSusunKata : MonoBehaviour
     {
         wordObjects[index].SetActive(false);
         jawaban.text += words[index] + " ";
-        
+        Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = jawaban.text.ToLower();
     }
 
     public void ResetWords()

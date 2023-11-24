@@ -12,4 +12,9 @@ public class TypeEssay : MonoBehaviour
         SoalHandler.instance.currentJawaban[SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower();
 
     }
+
+    public void JawabanLevel4()
+    {
+        Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower();
+    }
 }
