@@ -4202,6 +4202,7 @@ MonoBehaviour:
   nameText: {fileID: 560023140}
   nameInput: {fileID: 1131240993}
   submitNameButton: {fileID: 1815086888}
+  bitangText: {fileID: 1822569730}
 --- !u!1 &1260372069
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,7 +5689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d01756c4c2cdecf44ab7d90ab9de83c2, type: 2}
   m_sharedMaterial: {fileID: 8492122772873042479, guid: d01756c4c2cdecf44ab7d90ab9de83c2, type: 2}
@@ -6839,7 +6840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d01756c4c2cdecf44ab7d90ab9de83c2, type: 2}
   m_sharedMaterial: {fileID: 8492122772873042479, guid: d01756c4c2cdecf44ab7d90ab9de83c2, type: 2}

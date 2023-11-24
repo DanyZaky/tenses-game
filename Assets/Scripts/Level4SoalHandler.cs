@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,6 +23,17 @@ public class Level4SoalHandler : MonoBehaviour
     public string[] currentJawaban;
     public int[] soalIndex;
     public int currentIndex;
+
+    public int correct, wrong;
+
+    [Header("Finish")]
+    public TextMeshProUGUI resultText;
+    public Image gelarImage;
+    public GameObject[] bintangs;
+    public TextMeshProUGUI totalbintangs;
+    public Sprite[] gelars;
+
+
     void Start()
     {
         soalIndex = GenerateRandomIntArray(10, 0, 44);
@@ -118,8 +131,50 @@ public class Level4SoalHandler : MonoBehaviour
 
     public void FinishButton()
     {
-        PlayerPrefs.SetInt("Level", 4);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        correct = 0;
+        wrong = 0;
+        
+        //PlayerPrefs.SetInt("Level", 5);
+        for (int i = 0;i < currentJawaban.Length;i++)
+        {
+            if (currentJawaban[i].ToLower().TrimEnd() == currentKunciLevel3[i].ToLower().TrimEnd())
+            {
+                correct++;
+            }
+        }
+
+        wrong = 10 - correct;
+
+        Debug.Log("Benar : " + correct +  "Salah : " + wrong);
+
+        resultText.text = "Right : " + correct + "\nWrong : " + wrong;
+        if(correct <= 3)
+        {
+            gelarImage.sprite = gelars[0];
+        }
+        else if(correct <= 6 && correct > 3) 
+        {
+            gelarImage.sprite = gelars[1];
+        }
+        else if (correct <= 10 && correct > 6)
+        {
+            gelarImage.sprite = gelars[2];
+        }
+
+        for (int i = 0; i < bintangs.Length; i++)
+        {
+            bintangs[i].SetActive(false);
+        }
+
+        for (int i = 0; i < correct; i++)
+        {
+            bintangs[i].SetActive(true);
+        }
+
+        totalbintangs.text = correct.ToString();
+        int currentBintang = PlayerPrefs.GetInt("Bintang", 0) + correct;
+        PlayerPrefs.SetInt("Bintang", currentBintang);
+
     }
 
     bool CheckArrayValues(string[] array)
@@ -132,5 +187,10 @@ public class Level4SoalHandler : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -11,6 +11,8 @@ public class MainMenuManager : MonoBehaviour
     public TMP_InputField nameInput;
     public Button submitNameButton;
 
+    public TextMeshProUGUI bitangText;
+
     void Start()
     {
         nameInput.text = "";
@@ -28,6 +30,7 @@ public class MainMenuManager : MonoBehaviour
         }
 
         nameText.text = nameInput.text;
+        bitangText.text = PlayerPrefs.GetInt("Bintang", 0).ToString();
     }
 
     public void PlayButton()
