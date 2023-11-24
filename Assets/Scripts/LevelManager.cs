@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
@@ -116,6 +117,11 @@ public class LevelManager : MonoBehaviour
             }
             level2[indexLevel2].SetActive(true);
         }
+    }
+
+    public void HomeButton()
+    {
+        SceneManager.LoadScene(0);
     }
 }
 

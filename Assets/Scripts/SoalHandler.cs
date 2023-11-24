@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SoalHandler : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class SoalHandler : MonoBehaviour
         instance = this;
     }
 
-    public GameObject nextButton, prevButton;
+    public GameObject nextButton, prevButton, finishButton;
 
     public GameObject[] soalDisplay;
     public string[] kunciLevel3;
@@ -43,17 +44,31 @@ public class SoalHandler : MonoBehaviour
         {
             prevButton.SetActive(false);
             nextButton.SetActive(true);
+            finishButton.SetActive(false);
         }
         else if(currentIndex >= 9)
         {
             prevButton.SetActive(true);
             nextButton.SetActive(false);
+            finishButton.SetActive(true);
         }
         else
         {
             prevButton.SetActive(true);
             nextButton.SetActive(true);
+            finishButton.SetActive(false);
         }
+
+        if(CheckArrayValues(currentJawaban))
+        {
+            finishButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            finishButton.GetComponent<Button>().interactable = false;
+        }
+
+        Debug.Log(CheckArrayValues(currentJawaban));
     }
 
     int[] GenerateRandomIntArray(int length, int minValue, int maxValue)
@@ -99,5 +114,23 @@ public class SoalHandler : MonoBehaviour
             soalDisplay[i].SetActive(false);
         }
         soalDisplay[soalIndex[currentIndex]].SetActive(true);
+    }
+
+    public void FinishButton()
+    {
+        PlayerPrefs.SetInt("Level", 4);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    bool CheckArrayValues(string[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (string.IsNullOrEmpty(array[i]) || array[i] == "")
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
