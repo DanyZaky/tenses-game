@@ -15,6 +15,7 @@ public class Level4SoalHandler : MonoBehaviour
     }
 
     public GameObject nextButton, prevButton, finishButton;
+    public AudioSource BGM;
 
     public GameObject[] soalDisplay;
     public string[] kunciLevel3;
@@ -99,6 +100,7 @@ public class Level4SoalHandler : MonoBehaviour
 
         if(isTImeRunning)
         {
+            BGM.mute = true;
             if (currentTime > 0)
             {
                 currentTime -= Time.deltaTime;
@@ -126,6 +128,7 @@ public class Level4SoalHandler : MonoBehaviour
         else
         {
             currentTime = totalTime;
+            BGM.mute = false;
         }
     }
 
