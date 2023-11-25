@@ -94,6 +94,10 @@ public class LevelManager : MonoBehaviour
 
         if (indexLevel2 >= level2.Length - 1)
         {
+            for (int i2 = 0; i2 < level2Audio.Length; i2++)
+            {
+                level2Audio[i2].Stop();
+            }
             Debug.Log("Finish Level 2");
             PlayerPrefs.SetInt("Level", 3);
             indexLevel2 = 0;
@@ -113,6 +117,10 @@ public class LevelManager : MonoBehaviour
             indexLevel2++;
             if (indexLevel2 != 0 && indexLevel2 != 1)
             {
+                for(int i2 = 0;i2 < level2Audio.Length;i2++)
+                {
+                    level2Audio[i2].Stop();
+                }
                 level2Audio[indexLevel2].Play();
             }
             level2[indexLevel2].SetActive(true);

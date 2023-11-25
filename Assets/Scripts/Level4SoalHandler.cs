@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,6 +32,14 @@ public class Level4SoalHandler : MonoBehaviour
     public TextMeshProUGUI totalbintangs;
     public Sprite[] gelars;
 
+    [Header("Timer")]
+    public TextMeshProUGUI timerText;
+    public Image backgroundTimer;
+    public float totalTime = 600f;
+    public bool isTImeRunning;
+    public float currentTime;
+    public GameObject gameOver;
+
 
     void Start()
     {
@@ -49,6 +56,12 @@ public class Level4SoalHandler : MonoBehaviour
             soalDisplay[i].SetActive(false);
         }
         soalDisplay[soalIndex[currentIndex]].SetActive(true);
+
+        isTImeRunning = false;
+        currentTime = totalTime;
+        backgroundTimer.color = new Color32(255, 228, 181, 255);
+        timerText.color = Color.black;
+        gameOver.SetActive(false);
     }
 
     private void Update()
@@ -82,6 +95,48 @@ public class Level4SoalHandler : MonoBehaviour
         }
 
         Debug.Log(CheckArrayValues(currentJawaban));
+
+
+        if(isTImeRunning)
+        {
+            if (currentTime > 0)
+            {
+                currentTime -= Time.deltaTime;
+                UpdateTimerText();
+
+                if(currentTime > 60)
+                {
+                    backgroundTimer.color = new Color32(255, 228, 181, 255);
+                    timerText.color = Color.black;
+                }
+                else
+                {
+                    backgroundTimer.color = Color.red;
+                    timerText.color = Color.white;
+                }
+            }
+            else
+            {
+                gameOver.SetActive(true);
+                isTImeRunning = false;
+                currentTime = totalTime;
+                Debug.Log("Waktu telah habis!");
+            }
+        }
+        else
+        {
+            currentTime = totalTime;
+        }
+    }
+
+    void UpdateTimerText()
+    {
+        // Menghitung menit dan detik
+        int minutes = Mathf.FloorToInt(currentTime / 60);
+        int seconds = Mathf.FloorToInt(currentTime % 60);
+
+        // Mengatur teks timer dengan format 00:00
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     int[] GenerateRandomIntArray(int length, int minValue, int maxValue)
@@ -131,6 +186,7 @@ public class Level4SoalHandler : MonoBehaviour
 
     public void FinishButton()
     {
+        isTImeRunning = false;
         correct = 0;
         wrong = 0;
         
@@ -151,14 +207,21 @@ public class Level4SoalHandler : MonoBehaviour
         if(correct <= 3)
         {
             gelarImage.sprite = gelars[0];
+            PlayerPrefs.SetInt("Badge", 3);
         }
         else if(correct <= 6 && correct > 3) 
         {
             gelarImage.sprite = gelars[1];
+            PlayerPrefs.SetInt("Badge", 2);
         }
         else if (correct <= 10 && correct > 6)
         {
             gelarImage.sprite = gelars[2];
+            PlayerPrefs.SetInt("Badge", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Badge", 0);
         }
 
         for (int i = 0; i < bintangs.Length; i++)
@@ -192,5 +255,10 @@ public class Level4SoalHandler : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartLevel4()
+    {
+        isTImeRunning = true;
     }
 }
