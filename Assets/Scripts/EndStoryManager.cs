@@ -25,16 +25,16 @@ public class EndStoryManager : MonoBehaviour
 
     public void OnClickDelay1()
     {
-        StartCoroutine(delay1(3f));
+        StartCoroutine(delay1(2f));
     }
 
     public void OnClickDelay2() 
     {
-        StartCoroutine(delay2(3f));
+        StartCoroutine(delay2(2f));
     }
     public void OnClickDelay3() 
     {
-        StartCoroutine(delay3(8f));
+        StartCoroutine(delay3(2f));
     }
 
     private IEnumerator delay1(float time)

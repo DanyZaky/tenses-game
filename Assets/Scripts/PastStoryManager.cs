@@ -19,7 +19,7 @@ public class PastStoryManager : MonoBehaviour
             slides[i].gameObject.SetActive(false);
         }
         slides[0].gameObject.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2f);
         for (int i = 0; i < slides.Length; i++)
         {
             slides[i].gameObject.SetActive(false);

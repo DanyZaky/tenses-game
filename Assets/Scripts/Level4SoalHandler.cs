@@ -222,6 +222,7 @@ public class Level4SoalHandler : MonoBehaviour
         }
         else
         {
+            gelarImage.sprite = gelars[3];
             PlayerPrefs.SetInt("Badge", 0);
         }
 
@@ -235,7 +236,15 @@ public class Level4SoalHandler : MonoBehaviour
             bintangs[i].SetActive(true);
         }
 
-        totalbintangs.text = correct.ToString();
+        if(correct <= 0)
+        {
+            totalbintangs.text = "You don't get a Star!";
+        }
+        else
+        {
+            totalbintangs.text = correct.ToString();
+        }
+        
         int currentBintang = PlayerPrefs.GetInt("Bintang", 0) + correct;
         PlayerPrefs.SetInt("Bintang", currentBintang);
 
