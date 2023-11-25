@@ -186,6 +186,7 @@ public class Level4SoalHandler : MonoBehaviour
 
     public void FinishButton()
     {
+        PlayerPrefs.SetInt("EndLock", 1);
         isTImeRunning = false;
         correct = 0;
         wrong = 0;
