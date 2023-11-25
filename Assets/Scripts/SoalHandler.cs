@@ -21,6 +21,12 @@ public class SoalHandler : MonoBehaviour
     public string[] currentJawaban;
     public int[] soalIndex;
     public int currentIndex;
+
+    [Header("Health")]
+    public int startHealth;
+    public int currentHealth;
+    public GameObject[] healthObjects;
+
     void Start()
     {
         soalIndex = GenerateRandomIntArray(10, 0, 14);
