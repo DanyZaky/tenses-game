@@ -6,7 +6,7 @@ public class PlayAudioHandler : MonoBehaviour
 {
     public void PlayThisAudio()
     {
-        gameObject.GetComponent<AudioSource>().Play();
+        gameObject.GetComponent<AudioSource>().Play(); //Play audio tiap soal.
 
     }
 }

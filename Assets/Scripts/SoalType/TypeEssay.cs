@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class TypeEssay : MonoBehaviour
 {
-    public TMP_InputField jawabanInput;
+    public TMP_InputField jawabanInput; // Mendeklarasikan variabel public TMP_InputField bernama jawabanInput.
 
     public void Jawaban()
     {
-        SoalHandler.instance.currentJawaban[SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower();
+        SoalHandler.instance.currentJawaban[SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower(); // Mengakses array currentJawaban di SoalHandler.instance dan menetapkan teks dalam huruf kecil dari jawabanInput ke indeks saat ini.
 
     }
 
     public void JawabanLevel4()
     {
-        Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower();
+        Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower(); // Mengakses array currentJawaban di Level4SoalHandler.instance dan menetapkan teks dalam huruf kecil dari jawabanInput ke indeks saat ini.
     }
 }

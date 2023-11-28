@@ -27,6 +27,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
+        //Kondisi untuk lock dan unlock button level 1-4
         if(PlayerPrefs.GetInt("Level", 1) == 1)
         {
             for(int i = 0; i < buttonLevels.Length; i++)
@@ -63,9 +64,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void NextLevel1Button()
+    public void NextLevel1Button() //Untuk fungsi next slide di level 1
     {
-        if (indexLevel1 >= level1.Length - 1)
+        if (indexLevel1 >= level1.Length - 1) // kondisi jika sudah di slide terakhir
         {
             Debug.Log("Finish Level 1");
             PlayerPrefs.SetInt("Level", 2);
@@ -77,7 +78,7 @@ public class LevelManager : MonoBehaviour
             level1[0].SetActive(true);
             level1Panel.SetActive(false);
         }
-        else
+        else // kondisi jika velum di slide terakhir
         {
             for (int i = 0; i < level1.Length; i++)
             {
@@ -92,7 +93,7 @@ public class LevelManager : MonoBehaviour
     public void NextLevel2Button()
     {
 
-        if (indexLevel2 >= level2.Length - 1)
+        if (indexLevel2 >= level2.Length - 1) // kondisi jika sudah di slide terakhir
         {
             for (int i2 = 0; i2 < level2Audio.Length; i2++)
             {
@@ -108,7 +109,7 @@ public class LevelManager : MonoBehaviour
             level2[0].SetActive(true);
             level2Panel.SetActive(false);
         }
-        else
+        else // kondisi jika velum di slide terakhir
         {
             for (int i = 0; i < level2.Length; i++)
             {

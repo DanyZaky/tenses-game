@@ -132,7 +132,7 @@ public class Level4SoalHandler : MonoBehaviour
         }
     }
 
-    void UpdateTimerText()
+    void UpdateTimerText() // fungsi untuk timer soal 10 menit dengan format 00:00
     {
         // Menghitung menit dan detik
         int minutes = Mathf.FloorToInt(currentTime / 60);
@@ -142,7 +142,7 @@ public class Level4SoalHandler : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    int[] GenerateRandomIntArray(int length, int minValue, int maxValue)
+    int[] GenerateRandomIntArray(int length, int minValue, int maxValue) //fungsi random 10 soal
     {
         if (length > (maxValue - minValue + 1))
         {
@@ -167,7 +167,7 @@ public class Level4SoalHandler : MonoBehaviour
         return randomArray;
     }
 
-    public void NextSoal()
+    public void NextSoal() // fungsi next slide soal
     {
         currentIndex++;
         for (int i = 0; i < soalDisplay.Length; i++)
@@ -177,7 +177,7 @@ public class Level4SoalHandler : MonoBehaviour
         soalDisplay[soalIndex[currentIndex]].SetActive(true);
     }
 
-    public void PrevSoal()
+    public void PrevSoal() //funsgi prev slide soal
     {
         currentIndex--;
         for (int i = 0; i < soalDisplay.Length; i++)
@@ -187,14 +187,14 @@ public class Level4SoalHandler : MonoBehaviour
         soalDisplay[soalIndex[currentIndex]].SetActive(true);
     }
 
-    public void FinishButton()
+    public void FinishButton() // fungsi jika dia sudah finish
     {
         PlayerPrefs.SetInt("EndLock", 1);
         isTImeRunning = false;
         correct = 0;
         wrong = 0;
         
-        //PlayerPrefs.SetInt("Level", 5);
+        // perhitungan nilai benar
         for (int i = 0;i < currentJawaban.Length;i++)
         {
             if (currentJawaban[i].ToLower().TrimEnd() == currentKunciLevel3[i].ToLower().TrimEnd())
@@ -203,11 +203,12 @@ public class Level4SoalHandler : MonoBehaviour
             }
         }
 
-        wrong = 10 - correct;
+        wrong = 10 - correct; // perhitangan nilai salah
 
         Debug.Log("Benar : " + correct +  "Salah : " + wrong);
 
         resultText.text = "Right : " + correct + "\nWrong : " + wrong;
+        // kondisi untuk mendapatkan badge
         if(correct <= 3)
         {
             gelarImage.sprite = gelars[0];
@@ -229,6 +230,7 @@ public class Level4SoalHandler : MonoBehaviour
             PlayerPrefs.SetInt("Badge", 0);
         }
 
+        //kondisi untuk mendapatkan bintang
         for (int i = 0; i < bintangs.Length; i++)
         {
             bintangs[i].SetActive(false);
@@ -239,6 +241,7 @@ public class Level4SoalHandler : MonoBehaviour
             bintangs[i].SetActive(true);
         }
 
+        //kondisi jika tidak mendapatkan bintang
         if(correct <= 0)
         {
             totalbintangs.text = "You don't get a Star!";
@@ -253,7 +256,7 @@ public class Level4SoalHandler : MonoBehaviour
 
     }
 
-    bool CheckArrayValues(string[] array)
+    bool CheckArrayValues(string[] array) //kondisi jika jawaban masih kosong
     {
         for (int i = 0; i < array.Length; i++)
         {

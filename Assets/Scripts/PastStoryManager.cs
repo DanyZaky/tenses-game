@@ -12,7 +12,7 @@ public class PastStoryManager : MonoBehaviour
         StartCoroutine(starting());
     }
 
-    private IEnumerator starting()
+    private IEnumerator starting() // membuat fungsi delay tiap slide di Past Story
     {
         for (int i = 0; i < slides.Length; i++)
         {

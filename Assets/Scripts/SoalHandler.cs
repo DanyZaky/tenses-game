@@ -107,7 +107,7 @@ public class SoalHandler : MonoBehaviour
         Debug.Log(CheckArrayValues(currentJawaban));
     }
 
-    int[] GenerateRandomIntArray(int length, int minValue, int maxValue)
+    int[] GenerateRandomIntArray(int length, int minValue, int maxValue) //Fungsi untuk generate random untuk Random pada 10 soal
     {
         if (length > (maxValue - minValue + 1))
         {
@@ -132,7 +132,7 @@ public class SoalHandler : MonoBehaviour
         return randomArray;
     }
 
-    public void NextSoal()
+    public void NextSoal() //fungsi untuk ke soal berikutnya
     {
         currentIndex++;
         for (int i = 0; i < soalDisplay.Length; i++)
@@ -142,7 +142,7 @@ public class SoalHandler : MonoBehaviour
         soalDisplay[soalIndex[currentIndex]].SetActive(true);
     }
 
-    public void PrevSoal()
+    public void PrevSoal() //fungsi untuk ke soal sebelumnya
     {
         currentIndex--;
         for (int i = 0; i < soalDisplay.Length; i++)
@@ -152,15 +152,12 @@ public class SoalHandler : MonoBehaviour
         soalDisplay[soalIndex[currentIndex]].SetActive(true);
     }
 
-    public void FinishButton()
+    public void FinishButton() // fungsi untuk klik button Finish
     {
-        //PlayerPrefs.SetInt("Level", 4);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         int correct = 0;
         int wrong = 0;
 
-        for (int i = 0; i < currentJawaban.Length; i++)
+        for (int i = 0; i < currentJawaban.Length; i++) // fungsi pengecekan nilai benar
         {
             if (currentJawaban[i].ToLower().TrimEnd() == currentKunciLevel3[i].ToLower().TrimEnd())
             {
@@ -168,17 +165,17 @@ public class SoalHandler : MonoBehaviour
             }
         }
 
-        wrong = 10 - correct;
+        wrong = 10 - correct; // menghitung nilai salah
 
         Debug.Log("Benar : " + correct + "Salah : " + wrong);
 
-        if(wrong > 3)
+        if(wrong > 3) // kondisi jika nilai benar masih dibawah 3
         {
             wrongPanel.SetActive(true);
             correctPanel.SetActive(false);
             currentHealth--;
         }
-        else
+        else // kondisi menang
         {
             PlayerPrefs.SetInt("Level", 4);
             correctPanel.SetActive(true);
