@@ -17,4 +17,9 @@ public class TypeEssay : MonoBehaviour
     {
         Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower(); // Mengakses array currentJawaban di Level4SoalHandler.instance dan menetapkan teks dalam huruf kecil dari jawabanInput ke indeks saat ini.
     }
+
+    public void JawabanLevel3BKT()
+    {
+        BKTAlgorithm.instance.currentJawaban = jawabanInput.text.ToLower();
+    }
 }

@@ -13,7 +13,7 @@ public class TypeSusunKata : MonoBehaviour
     {
         wordObjects[index].SetActive(false);  // Menonaktifkan objek visual untuk kata yang dipilih.
         jawaban.text += words[index] + " ";  // Menambahkan kata yang dipilih ke teks jawaban dengan spasi.
-        Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = jawaban.text.ToLower();  // Menetapkan nilai jawaban saat ini dari Level4SoalHandler dengan teks jawaban dalam huruf kecil.
+        BKTAlgorithm.instance.currentJawaban = jawaban.text.ToLower();  // Menetapkan nilai jawaban saat ini dari Level4SoalHandler dengan teks jawaban dalam huruf kecil.
     }
 
     public void ResetWords() // Metode untuk mereset pilihan kata-kata dan teks jawaban.

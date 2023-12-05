@@ -18,8 +18,8 @@ public class Level4SoalHandler : MonoBehaviour
     public AudioSource BGM;
 
     public GameObject[] soalDisplay;
-    public string[] kunciLevel3;
-    public string[] currentKunciLevel3;
+    public string[] kunciLevel4;
+    public string[] currentKunciLevel4;
     public string[] currentJawaban;
     public int[] soalIndex;
     public int currentIndex;
@@ -46,9 +46,9 @@ public class Level4SoalHandler : MonoBehaviour
     {
         soalIndex = GenerateRandomIntArray(10, 0, 44);
 
-        for (int i = 0; i < currentKunciLevel3.Length; i++)
+        for (int i = 0; i < currentKunciLevel4.Length; i++)
         {
-            currentKunciLevel3[i] = kunciLevel3[soalIndex[i]];
+            currentKunciLevel4[i] = kunciLevel4[soalIndex[i]];
         }
 
         currentIndex = 0;
@@ -197,7 +197,7 @@ public class Level4SoalHandler : MonoBehaviour
         // perhitungan nilai benar
         for (int i = 0;i < currentJawaban.Length;i++)
         {
-            if (currentJawaban[i].ToLower().TrimEnd() == currentKunciLevel3[i].ToLower().TrimEnd())
+            if (currentJawaban[i].ToLower().TrimEnd() == currentKunciLevel4[i].ToLower().TrimEnd())
             {
                 correct++;
             }
