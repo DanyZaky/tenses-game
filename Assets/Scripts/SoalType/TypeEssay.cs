@@ -9,7 +9,7 @@ public class TypeEssay : MonoBehaviour
 
     public void Jawaban()
     {
-        SoalHandler.instance.currentJawaban[SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower(); // Mengakses array currentJawaban di SoalHandler.instance dan menetapkan teks dalam huruf kecil dari jawabanInput ke indeks saat ini.
+        Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = jawabanInput.text.ToLower(); // Mengakses array currentJawaban di SoalHandler.instance dan menetapkan teks dalam huruf kecil dari jawabanInput ke indeks saat ini.
 
     }
 

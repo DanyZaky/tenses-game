@@ -44,7 +44,7 @@ public class Level4SoalHandler : MonoBehaviour
 
     void Start()
     {
-        soalIndex = GenerateRandomIntArray(10, 0, 44);
+        soalIndex = GenerateRandomIntArray(10, 0, 14);
 
         for (int i = 0; i < currentKunciLevel4.Length; i++)
         {

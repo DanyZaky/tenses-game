@@ -209,9 +209,14 @@ public class BKTAlgorithm : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    public void GameOver(int index)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        if(index == 10)
+        {
+            PlayerPrefs.SetInt("Level", 4);
+        }
     }
 
     public void CheckSoal()

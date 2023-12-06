@@ -9,7 +9,7 @@ public class TypePilgan : MonoBehaviour
 
     public void JawabanSalah(int index)
     {
-        SoalHandler.instance.currentJawaban[SoalHandler.instance.currentIndex] = "Salah"; // Menetapkan nilai "Salah" ke array currentJawaban pada indeks saat ini.
+        Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = "Salah"; // Menetapkan nilai "Salah" ke array currentJawaban pada indeks saat ini.
         // Mengaktifkan kembali interaktabilitas semua tombol jawaban.
         for (int i = 0; i < answerButtons.Length; i++)
         {
@@ -21,7 +21,7 @@ public class TypePilgan : MonoBehaviour
 
     public void JawabanBenar(int index)
     {
-        SoalHandler.instance.currentJawaban[SoalHandler.instance.currentIndex] = SoalHandler.instance.currentKunciLevel3[SoalHandler.instance.currentIndex]; // Menetapkan nilai kunci jawaban ke array currentJawaban pada indeks saat ini.
+        Level4SoalHandler.instance.currentJawaban[Level4SoalHandler.instance.currentIndex] = Level4SoalHandler.instance.currentKunciLevel4[Level4SoalHandler.instance.currentIndex]; // Menetapkan nilai kunci jawaban ke array currentJawaban pada indeks saat ini.
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
