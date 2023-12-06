@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BKTAlgorithm : MonoBehaviour
@@ -34,9 +36,18 @@ public class BKTAlgorithm : MonoBehaviour
     private float guessRate = 0.1f;
     private float slipRate = 0.05f;
 
+    [Header("Win/Lose Condition")]
+    public GameObject winPanel;
+    public TextMeshProUGUI bktText;
+    public TextMeshProUGUI kesulitanText;
+    public GameObject[] health;
+    public int currentHealth;
+    public GameObject losePanel;
+
     private void Start()
     {
         totalSoal = 1;
+        currentHealth = 3;
     }
 
     private void Update()
@@ -48,6 +59,40 @@ public class BKTAlgorithm : MonoBehaviour
         else
         {
             nextButton.interactable = true;
+        }
+
+        if(currentHealth >= 3)
+        {
+            for (int i = 0; i < health.Length; i++)
+            {
+                health[i].SetActive(true);
+            }
+        }
+        else if(currentHealth == 2)
+        {
+            for (int i = 0; i < health.Length; i++)
+            {
+                health[i].SetActive(true);
+            }
+
+            health[2].SetActive(false);
+        }
+        else if (currentHealth == 1)
+        {
+            for (int i = 0; i < health.Length; i++)
+            {
+                health[i].SetActive(true);
+            }
+
+            health[2].SetActive(false);
+            health[1].SetActive(false);
+        }
+        else if(currentHealth <= 0)
+        {
+            for (int i = 0; i < health.Length; i++)
+            {
+                health[i].SetActive(false);
+            }
         }
     }
 
@@ -63,18 +108,22 @@ public class BKTAlgorithm : MonoBehaviour
             // Memilih soal secara acak
             int randomIndex = Random.Range(0, questionList.Count);
             GameObject selectedQuestion = questionList[randomIndex];
+            string tipeSoalString = "";
 
-            if(questionList == easyQuestions)
+            if (questionList == easyQuestions)
             {
                 currentKunciJawaban = easyQuestionsKunci[randomIndex];
+                tipeSoalString = "Mudah";
             }
             else if(questionList == mediumQuestions)
             {
                 currentKunciJawaban = mediumQuestionsKunci[randomIndex];
+                tipeSoalString = "Sedang";
             }
             else if(questionList == hardQuestions)
             {
                 currentKunciJawaban = hardQuestionsKunci[randomIndex];
+                tipeSoalString = "Sulit";
             }
 
             for (int i = 0; i < easyQuestions.Count; i++)
@@ -94,6 +143,9 @@ public class BKTAlgorithm : MonoBehaviour
             selectedQuestion.SetActive(true);
 
             currentJawaban = "";
+
+            kesulitanText.text = kesulitanText.text + "\n" + tipeSoalString;
+            bktText.text = bktText.text + "\n" + knowledge.ToString("0.0");
         }
         else
         {
@@ -116,6 +168,7 @@ public class BKTAlgorithm : MonoBehaviour
         {
             isCorrect = false;
             uncorrectResult.SetActive(true);
+            currentHealth--;
         }
 
         // Memperbarui pengetahuan berdasarkan respons jawaban
@@ -153,6 +206,30 @@ public class BKTAlgorithm : MonoBehaviour
         else
         {
             knowledge = knowledge * (1 - pGuess);
+        }
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void CheckSoal()
+    {
+        if(currentHealth <= 0)
+        {
+            losePanel.SetActive(true);
+        }
+        else
+        {
+            if (totalSoal >= 10)
+            {
+                winPanel.SetActive(true);
+            }
+            else
+            {
+                winPanel.SetActive(false);
+            }
         }
     }
 }
