@@ -19,6 +19,11 @@ public class BKTAlgorithm : MonoBehaviour
     public string[] kunciJawaban;
     public Button nextButton;
 
+    [SerializeField] private List<int> generatedNumbersEasy = new List<int>();
+    [SerializeField] private List<int> generatedNumbersMed = new List<int>();
+    [SerializeField] private List<int> generatedNumbersHard = new List<int>();
+    [SerializeField] private GameObject selectedQuestion;
+
     [Header("Soal Display")]
     public List<GameObject> easyQuestions;
     public List<GameObject> mediumQuestions;
@@ -48,6 +53,10 @@ public class BKTAlgorithm : MonoBehaviour
     {
         totalSoal = 1;
         currentHealth = 3;
+
+        generatedNumbersEasy.Clear();
+        generatedNumbersMed.Clear();
+        generatedNumbersHard.Clear();
     }
 
     private void Update()
@@ -106,22 +115,29 @@ public class BKTAlgorithm : MonoBehaviour
         if (questionList.Count > 0)
         {
             // Memilih soal secara acak
-            int randomIndex = Random.Range(0, questionList.Count);
-            GameObject selectedQuestion = questionList[randomIndex];
+            //int randomIndex = Random.Range(0, questionList.Count);
+
+            //selectedQuestion = questionList[GetUniqueRandomNumber(generatedNumbersEasy, easyQuestions)];
             string tipeSoalString = "";
 
             if (questionList == easyQuestions)
             {
+                int randomIndex = GetUniqueRandomNumber(generatedNumbersEasy, easyQuestions);
+                selectedQuestion = questionList[randomIndex];
                 currentKunciJawaban = easyQuestionsKunci[randomIndex];
                 tipeSoalString = "Mudah";
             }
             else if(questionList == mediumQuestions)
             {
+                int randomIndex = GetUniqueRandomNumber(generatedNumbersMed, mediumQuestions);
+                selectedQuestion = questionList[randomIndex];
                 currentKunciJawaban = mediumQuestionsKunci[randomIndex];
                 tipeSoalString = "Sedang";
             }
             else if(questionList == hardQuestions)
             {
+                int randomIndex = GetUniqueRandomNumber(generatedNumbersHard, hardQuestions);
+                selectedQuestion = questionList[randomIndex];
                 currentKunciJawaban = hardQuestionsKunci[randomIndex];
                 tipeSoalString = "Sulit";
             }
@@ -145,12 +161,24 @@ public class BKTAlgorithm : MonoBehaviour
             currentJawaban = "";
 
             kesulitanText.text = kesulitanText.text + "\n" + tipeSoalString;
-            bktText.text = bktText.text + "\n" + knowledge.ToString("0.0");
+            bktText.text = bktText.text + "\n" + knowledge.ToString("0.000");
         }
         else
         {
             Debug.LogWarning("No questions available.");
         }
+    }
+
+    int GetUniqueRandomNumber(List<int> generatedNumbers, List<GameObject> questionList)
+    {
+        int randomNumber;
+        do
+        {
+            randomNumber = Random.Range(1, questionList.Count);
+        } while (generatedNumbers.Contains(randomNumber));
+
+        generatedNumbers.Add(randomNumber);
+        return randomNumber;
     }
 
     public void CheckAnswer()
@@ -163,6 +191,10 @@ public class BKTAlgorithm : MonoBehaviour
         {
             isCorrect = true;
             correctResult.SetActive(true);
+            if(currentHealth < 3)
+            {
+                currentHealth++;
+            }
         }
         else
         {
