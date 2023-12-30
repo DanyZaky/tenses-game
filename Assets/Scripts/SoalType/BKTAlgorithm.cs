@@ -7,33 +7,38 @@ using UnityEngine.UI;
 
 public class BKTAlgorithm : MonoBehaviour
 {
+    // Pola Singleton
     public static BKTAlgorithm instance;
 
     private void Awake()
     {
         instance = this;
     }
-
+    // Variabel untuk jawaban saat ini, objek hasil benar dan salah, kunci jawaban, dan tombol selanjutnya
     public string currentJawaban, currentKunciJawaban;
     public GameObject correctResult, uncorrectResult;
     public string[] kunciJawaban;
     public Button nextButton;
 
+    // Daftar untuk menyimpan angka acak yang dihasilkan untuk tingkat kesulitan yang berbeda
     [SerializeField] private List<int> generatedNumbersEasy = new List<int>();
     [SerializeField] private List<int> generatedNumbersMed = new List<int>();
     [SerializeField] private List<int> generatedNumbersHard = new List<int>();
     [SerializeField] private GameObject selectedQuestion;
 
+    // Daftar untuk menyimpan jenis-jenis pertanyaan yang berbeda untuk ditampilkan
     [Header("Soal Display")]
     public List<GameObject> easyQuestions;
     public List<GameObject> mediumQuestions;
     public List<GameObject> hardQuestions;
 
+    // Daftar untuk menyimpan kunci jawaban untuk jenis-jenis pertanyaan
     [Header("Kunci Jawaban")]
     public List<string> easyQuestionsKunci;
     public List<string> mediumQuestionsKunci;
     public List<string> hardQuestionsKunci;
 
+    // Variabel untuk parameter algoritma BKT
     [Header("BKT")]
     public int totalSoal;
     public float knowledge = 0.2f; // Pengetahuan awal
@@ -41,6 +46,7 @@ public class BKTAlgorithm : MonoBehaviour
     private float guessRate = 0.1f;
     private float slipRate = 0.05f;
 
+    // Elemem-elemen untuk kondisi menang/kalah
     [Header("Win/Lose Condition")]
     public GameObject winPanel;
     public TextMeshProUGUI bktText;
@@ -51,9 +57,11 @@ public class BKTAlgorithm : MonoBehaviour
 
     private void Start()
     {
+        // Menginisialisasi jumlah total pertanyaan dan kesehatan saat ini
         totalSoal = 1;
         currentHealth = 3;
 
+        // Mengosongkan daftar angka yang dihasilkan tiap tingkat kesulitan
         generatedNumbersEasy.Clear();
         generatedNumbersMed.Clear();
         generatedNumbersHard.Clear();
@@ -61,7 +69,8 @@ public class BKTAlgorithm : MonoBehaviour
 
     private void Update()
     {
-        if(currentJawaban == null || currentJawaban == "")
+        // Memeriksa apakah jawaban kosong atau null untuk mengaktifkan/menonaktifkan tombol selanjutnya
+        if (currentJawaban == null || currentJawaban == "")
         {
             nextButton.interactable = false;
         }
@@ -70,7 +79,8 @@ public class BKTAlgorithm : MonoBehaviour
             nextButton.interactable = true;
         }
 
-        if(currentHealth >= 3)
+        // Memperbarui UI berdasarkan health saat ini
+        if (currentHealth >= 3)
         {
             for (int i = 0; i < health.Length; i++)
             {
@@ -105,38 +115,38 @@ public class BKTAlgorithm : MonoBehaviour
         }
     }
 
+    // Metode untuk memulai level 3 BKT
     public void StartBKTLevel3()
     {
         ShowRandomQuestion(mediumQuestions);
     }
 
+    // Metode untuk menampilkan pertanyaan acak dari daftar yang diberikan
     private void ShowRandomQuestion(List<GameObject> questionList)
     {
+        // Memeriksa apakah ada pertanyaan dalam daftar
         if (questionList.Count > 0)
         {
             // Memilih soal secara acak
-            //int randomIndex = Random.Range(0, questionList.Count);
-
-            //selectedQuestion = questionList[GetUniqueRandomNumber(generatedNumbersEasy, easyQuestions)];
             string tipeSoalString = "";
 
             if (questionList == easyQuestions)
             {
-                int randomIndex = GetUniqueRandomNumber(generatedNumbersEasy, easyQuestions);
+                int randomIndex = GetUniqueRandomNumber(generatedNumbersEasy, easyQuestions); //memilih random soal 
                 selectedQuestion = questionList[randomIndex];
                 currentKunciJawaban = easyQuestionsKunci[randomIndex];
                 tipeSoalString = "Mudah";
             }
             else if(questionList == mediumQuestions)
             {
-                int randomIndex = GetUniqueRandomNumber(generatedNumbersMed, mediumQuestions);
+                int randomIndex = GetUniqueRandomNumber(generatedNumbersMed, mediumQuestions); //memilih random soal 
                 selectedQuestion = questionList[randomIndex];
                 currentKunciJawaban = mediumQuestionsKunci[randomIndex];
                 tipeSoalString = "Sedang";
             }
             else if(questionList == hardQuestions)
             {
-                int randomIndex = GetUniqueRandomNumber(generatedNumbersHard, hardQuestions);
+                int randomIndex = GetUniqueRandomNumber(generatedNumbersHard, hardQuestions); //memilih random soal 
                 selectedQuestion = questionList[randomIndex];
                 currentKunciJawaban = hardQuestionsKunci[randomIndex];
                 tipeSoalString = "Sulit";
@@ -155,11 +165,12 @@ public class BKTAlgorithm : MonoBehaviour
                 hardQuestions[i].SetActive(false);
             }
 
-            // Menampilkan soal
+            // Menampilkan pertanyaan yang dipilih
             selectedQuestion.SetActive(true);
-
+            // Mengatur ulang jawaban saat ini
             currentJawaban = "";
 
+            // Memperbarui UI dengan tingkat kesulitan dan pengetahuan
             kesulitanText.text = kesulitanText.text + "\n" + tipeSoalString;
             bktText.text = bktText.text + "\n" + knowledge.ToString("0.000");
         }
@@ -169,6 +180,7 @@ public class BKTAlgorithm : MonoBehaviour
         }
     }
 
+    // Metode untuk mendapatkan nomor acak unik dari sebuah list soal dengan tipe kesulitan tertentu
     int GetUniqueRandomNumber(List<int> generatedNumbers, List<GameObject> questionList)
     {
         int randomNumber;
@@ -181,15 +193,18 @@ public class BKTAlgorithm : MonoBehaviour
         return randomNumber;
     }
 
+    // Metode untuk memeriksa jawaban dan memperbarui status permainan
     public void CheckAnswer()
     {
+        // Menambahkan total pertanyaan
         totalSoal++;
-
+        // Memeriksa apakah jawaban benar
         bool isCorrect;
 
         if (currentJawaban.ToLower().TrimEnd() == currentKunciJawaban.ToLower().TrimEnd())
         {
             isCorrect = true;
+            // Menampilkan hasil benar dan memperbarui health
             correctResult.SetActive(true);
             if(currentHealth < 3)
             {
@@ -199,6 +214,7 @@ public class BKTAlgorithm : MonoBehaviour
         else
         {
             isCorrect = false;
+            // Menampilkan hasil salah dan memperbarui health
             uncorrectResult.SetActive(true);
             currentHealth--;
         }
@@ -228,20 +244,22 @@ public class BKTAlgorithm : MonoBehaviour
 
     private void UpdateKnowledge(bool isCorrect)
     {
+        // Menghitung probabilitas
         float pLearn = knowledge * (1 - slipRate) / ((knowledge * (1 - slipRate)) + ((1 - knowledge) * guessRate));
         float pGuess = (1 - knowledge) * guessRate / (((1 - knowledge) * guessRate) + (knowledge * slipRate));
 
-        if (isCorrect)
+        // Memperbarui pengetahuan
+        if (isCorrect) //perbarui jika benar
         {
             knowledge = knowledge + (1 - knowledge) * pLearn;
         }
-        else
+        else // perbarui jika salah
         {
             knowledge = knowledge * (1 - pGuess);
         }
     }
 
-    public void GameOver(int index)
+    public void GameOver(int index) //update progress ke level 4
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
@@ -251,9 +269,11 @@ public class BKTAlgorithm : MonoBehaviour
         }
     }
 
+    // Metode untuk memeriksa status permainan secara keseluruhan
     public void CheckSoal()
     {
-        if(currentHealth <= 0)
+        // Memeriksa kondisi menang/kalah dan menampilkan panel yang sesuai
+        if (currentHealth <= 0)
         {
             losePanel.SetActive(true);
         }

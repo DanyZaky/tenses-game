@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TypeEssay : MonoBehaviour
+public class TypeEssay : MonoBehaviour //code ini keseluruh dipakai untuk fungsi soal type essay
 {
     public TMP_InputField jawabanInput; // Mendeklarasikan variabel public TMP_InputField bernama jawabanInput.
 
@@ -20,6 +20,6 @@ public class TypeEssay : MonoBehaviour
 
     public void JawabanLevel3BKT()
     {
-        BKTAlgorithm.instance.currentJawaban = jawabanInput.text.ToLower();
+        BKTAlgorithm.instance.currentJawaban = jawabanInput.text.ToLower(); //memasukkan hasil inputan ke dalam varible currenJawaban yang nantinya digunakan untuk cek soal jawaban
     }
 }

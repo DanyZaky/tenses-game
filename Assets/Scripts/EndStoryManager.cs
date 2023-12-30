@@ -13,7 +13,8 @@ public class EndStoryManager : MonoBehaviour
 
     private void Update()
     {
-        if(PlayerPrefs.GetInt("EndLock") == 0)
+        // Memeriksa status dari PlayerPrefs untuk menentukan apakah tombol "End" aktif atau tidak
+        if (PlayerPrefs.GetInt("EndLock") == 0)
         {
             buttonEnd.SetActive(false);
         }
@@ -23,20 +24,25 @@ public class EndStoryManager : MonoBehaviour
         }
     }
 
+    // Metode untuk memulai penundaan pertama
     public void OnClickDelay1()
     {
         StartCoroutine(delay1(2f));
     }
 
+    // Metode untuk memulai penundaan kedua
     public void OnClickDelay2() 
     {
         StartCoroutine(delay2(2f));
     }
+
+    // Metode untuk memulai penundaan ketiga
     public void OnClickDelay3() 
     {
         StartCoroutine(delay3(2f));
     }
 
+    // Coroutine untuk penundaan pertama
     private IEnumerator delay1(float time)
     {
         panelbeforeBuka.SetActive(true);
@@ -55,6 +61,7 @@ public class EndStoryManager : MonoBehaviour
         yield return new WaitForSeconds(time);
     }
 
+    // Coroutine untuk penundaan kedua
     private IEnumerator delay2(float time)
     {
         panelBeforePeti.SetActive(false);
@@ -75,6 +82,7 @@ public class EndStoryManager : MonoBehaviour
         panelAfterPeti.SetActive(true);
     }
 
+    // Coroutine untuk penundaan ketiga
     private IEnumerator delay3(float time)
     {
         panelAkhir.SetActive(false);
@@ -82,6 +90,7 @@ public class EndStoryManager : MonoBehaviour
 
         yield return new WaitForSeconds(time);
 
+        // Memuat kembali scene dengan indeks 0 atau menu utama
         SceneManager.LoadScene(0);
     }
 }

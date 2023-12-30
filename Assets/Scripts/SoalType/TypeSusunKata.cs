@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TypeSusunKata : MonoBehaviour
+public class TypeSusunKata : MonoBehaviour //code ini berfungsi untuk fungsi soal dengan type susun kata
 {
     public TMP_InputField jawaban;  // TMP_InputField untuk input jawaban.
     public string[] words;  // Array string berisi kata-kata yang dapat dipilih.

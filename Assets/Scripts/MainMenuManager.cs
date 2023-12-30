@@ -22,14 +22,17 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
+        // Mengatur teks input nama menjadi kosong
         nameInput.text = "";
 
+        // Memeriksa apakah nama sudah tersimpan di PlayerPrefs
         if (PlayerPrefs.GetString("Nama") == "" || PlayerPrefs.GetString("Nama") == null)
         {
+            // Jika belum, menampilkan halaman login dan menyembunyikan halaman menu
             loginPage.SetActive(true);
             menuPage.SetActive(false);
         }
-        else
+        else         // Jika sudah, menyembunyikan halaman login dan menampilkan halaman menu
         {
             loginPage.SetActive(false);
             menuPage.SetActive(true);
@@ -38,7 +41,8 @@ public class MainMenuManager : MonoBehaviour
 
     void Update()
     {
-        if(nameInput.text == "")
+        // Menonaktifkan tombol submit jika teks input nama kosong
+        if (nameInput.text == "")
         {
             submitNameButton.interactable = false;
         }
@@ -47,7 +51,8 @@ public class MainMenuManager : MonoBehaviour
             submitNameButton.interactable = true;
         }
 
-        if(PlayerPrefs.GetInt("Badge", 0) == 0)
+        // Menyesuaikan tampilan badge berdasarkan level badge yang dimiliki pemain
+        if (PlayerPrefs.GetInt("Badge", 0) == 0)
         {
             badgeImage.gameObject.SetActive(false);
             badgeText.gameObject.SetActive(false);
@@ -77,17 +82,18 @@ public class MainMenuManager : MonoBehaviour
             badgeText.text = "Tingkat 3";
         }
 
+        // Menampilkan nama dan jumlah bintang pada UI
         nameText.text = PlayerPrefs.GetString("Nama", "");
         bitangText.text = PlayerPrefs.GetInt("Bintang", 0).ToString();
     }
 
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);     // Memuat scene permainan dengan indeks 1
     }
 
     public void SubmitButton()
     {
-        PlayerPrefs.SetString("Nama", nameInput.text);
+        PlayerPrefs.SetString("Nama", nameInput.text);     // Menyimpan teks input nama ke dalam PlayerPrefs
     }
 }

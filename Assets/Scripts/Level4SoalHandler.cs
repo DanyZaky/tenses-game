@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Level4SoalHandler : MonoBehaviour
 {
+    // Singleton pattern untuk mendukung satu instance dari Level4SoalHandler
     public static Level4SoalHandler  instance;
 
     private void Awake()
@@ -14,9 +15,11 @@ public class Level4SoalHandler : MonoBehaviour
         instance = this;
     }
 
+    // Tombol navigasi untuk soal berikutnya, sebelumnya, dan selesai
     public GameObject nextButton, prevButton, finishButton;
     public AudioSource BGM;
 
+    // Array untuk menyimpan objek soal, kunci jawaban, jawaban pengguna, dan indeks soal yang diacak
     public GameObject[] soalDisplay;
     public string[] kunciLevel4;
     public string[] currentKunciLevel4;
@@ -24,6 +27,7 @@ public class Level4SoalHandler : MonoBehaviour
     public int[] soalIndex;
     public int currentIndex;
 
+    // Variabel untuk menghitung jawaban benar dan salah
     public int correct, wrong;
 
     [Header("Finish")]
@@ -44,14 +48,17 @@ public class Level4SoalHandler : MonoBehaviour
 
     void Start()
     {
+        // Menghasilkan indeks acak untuk 10 soal
         soalIndex = GenerateRandomIntArray(10, 0, 14);
 
+        // Mengisi array kunci jawaban level 4 berdasarkan indeks acak
         for (int i = 0; i < currentKunciLevel4.Length; i++)
         {
             currentKunciLevel4[i] = kunciLevel4[soalIndex[i]];
         }
 
         currentIndex = 0;
+        // Menampilkan soal pertama dan menyembunyikan yang lain
         for (int i = 0; i < soalDisplay.Length; i++)
         {
             soalDisplay[i].SetActive(false);
@@ -67,6 +74,7 @@ public class Level4SoalHandler : MonoBehaviour
 
     private void Update()
     {
+        // Menentukan tampilan tombol prev, next, dan finish berdasarkan indeks soal
         if (currentIndex <= 0)
         {
             prevButton.SetActive(false);
@@ -86,6 +94,7 @@ public class Level4SoalHandler : MonoBehaviour
             finishButton.SetActive(false);
         }
 
+        // Menentukan interaktifitas tombol finish berdasarkan jawaban yang diisi
         if (CheckArrayValues(currentJawaban))
         {
             finishButton.GetComponent<Button>().interactable = true;
@@ -97,8 +106,8 @@ public class Level4SoalHandler : MonoBehaviour
 
         Debug.Log(CheckArrayValues(currentJawaban));
 
-
-        if(isTImeRunning)
+        // Mengupdate timer jika sedang berjalan
+        if (isTImeRunning)
         {
             BGM.mute = true;
             if (currentTime > 0)
@@ -106,7 +115,8 @@ public class Level4SoalHandler : MonoBehaviour
                 currentTime -= Time.deltaTime;
                 UpdateTimerText();
 
-                if(currentTime > 60)
+                // Mengubah warna timer jika waktu kurang dari 60 detik
+                if (currentTime > 60)
                 {
                     backgroundTimer.color = new Color32(255, 228, 181, 255);
                     timerText.color = Color.black;
@@ -119,6 +129,7 @@ public class Level4SoalHandler : MonoBehaviour
             }
             else
             {
+                // Menampilkan game over jika waktu habis
                 gameOver.SetActive(true);
                 isTImeRunning = false;
                 currentTime = totalTime;
@@ -132,6 +143,7 @@ public class Level4SoalHandler : MonoBehaviour
         }
     }
 
+    // Fungsi untuk mengupdate teks timer
     void UpdateTimerText() // fungsi untuk timer soal 10 menit dengan format 00:00
     {
         // Menghitung menit dan detik
@@ -142,6 +154,7 @@ public class Level4SoalHandler : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    // Fungsi untuk menghasilkan array integer acak
     int[] GenerateRandomIntArray(int length, int minValue, int maxValue) //fungsi random 10 soal
     {
         if (length > (maxValue - minValue + 1))
@@ -167,6 +180,7 @@ public class Level4SoalHandler : MonoBehaviour
         return randomArray;
     }
 
+    // Fungsi untuk menampilkan soal berikutnya
     public void NextSoal() // fungsi next slide soal
     {
         currentIndex++;
@@ -189,6 +203,7 @@ public class Level4SoalHandler : MonoBehaviour
 
     public void FinishButton() // fungsi jika dia sudah finish
     {
+        // Mengunci game agar tidak bisa diulang
         PlayerPrefs.SetInt("EndLock", 1);
         isTImeRunning = false;
         correct = 0;
@@ -207,6 +222,7 @@ public class Level4SoalHandler : MonoBehaviour
 
         Debug.Log("Benar : " + correct +  "Salah : " + wrong);
 
+        // Menampilkan hasil dan memberikan gelar dan badge
         resultText.text = "Right : " + correct + "\nWrong : " + wrong;
         // kondisi untuk mendapatkan badge
         if(correct <= 3)
