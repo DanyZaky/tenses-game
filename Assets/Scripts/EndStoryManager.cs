@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * code ini hanya mengatur keseluruhan di bagian End Story dan hanya berfungsi sebagai slides next yang memiliki delay
+ * code ini tidak tersambung dengan code lainnya
+ */
 public class EndStoryManager : MonoBehaviour
 {
     public GameObject panelbeforeBuka, panelTua, panelPertama;

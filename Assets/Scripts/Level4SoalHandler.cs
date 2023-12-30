@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//Code ini mengatur soal yang ada di level 4 hingga win/lose conditiion
+//Code ini tersambung ke code MainMenuManager untuk mengambil data seperti health, user dll
+
 public class Level4SoalHandler : MonoBehaviour
 {
     // Singleton pattern untuk mendukung satu instance dari Level4SoalHandler

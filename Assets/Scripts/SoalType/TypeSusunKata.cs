@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+//Code ini mengatur keseluruhan Soal dengn type susun kata yang berfungsi menyimpan inputan jawaban dari Input user ke dalam variable currentJawaban
+//Code ini tersambung ke code BKTAlgoritm (untuk mengatur currentJawaban di level 3)
+
 public class TypeSusunKata : MonoBehaviour //code ini berfungsi untuk fungsi soal dengan type susun kata
 {
     public TMP_InputField jawaban;  // TMP_InputField untuk input jawaban.

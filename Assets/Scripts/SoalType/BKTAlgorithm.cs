@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//Code ini mengatur keseluruhan Soal di level 3 dengan implementasi BKT Algoritma hingga win/lose conditiion
+//Code ini tersambung ke code MainMenuManager untuk mengambil data seperti health, user dll
+
 public class BKTAlgorithm : MonoBehaviour
 {
     // Pola Singleton

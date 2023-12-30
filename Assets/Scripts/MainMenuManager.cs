@@ -5,6 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+ * code ini mengatur mengenai data dari user, baik itu dari nama, health, badge, dll
+ * code ini tidak tersambung dengan code lainnya, tetapi berhubungan dengan code level4handler dan BKTAlgorithm dalam pengambilan data
+ */
+
 public class MainMenuManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Code ini mengatur keseluruhan Soal dengn type pilgan yang berfungsi menyimpan inputan jawaban dari Input user ke dalam variable currentJawaban
+//Code ini tersambung ke code Level4SoalHandler (untuk mengatur currentJawaban di level 4) dan di code BKTAlgoritm (untuk mengatur currentJawaban di level 3)
+
 public class TypePilgan : MonoBehaviour //code ini keseluruhan untuk cek jawaba dengan type soal pilgan
 {
     public Button[] answerButtons; // Mendeklarasikan array tombol jawaban.

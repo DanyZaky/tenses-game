@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+ * code ini untuk mengatur keseluruh di level 1 dan 2, fungsi utamanya sebagai pengaturan slide pada tombol next di tiap level 1 dan 2
+ * code ini tidak tersambung ke code lainnya
+ */
+
 public class LevelManager : MonoBehaviour
 {
     public Button[] buttonLevels;
