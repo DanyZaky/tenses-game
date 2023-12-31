@@ -58,6 +58,8 @@ public class BKTAlgorithm : MonoBehaviour
     public int currentHealth;
     public GameObject losePanel;
 
+    private int jawabanBenar, jawabanSalah;
+
     private void Start()
     {
         // Menginisialisasi jumlah total pertanyaan dan kesehatan saat ini
@@ -68,6 +70,9 @@ public class BKTAlgorithm : MonoBehaviour
         generatedNumbersEasy.Clear();
         generatedNumbersMed.Clear();
         generatedNumbersHard.Clear();
+
+        jawabanBenar = 0;
+        jawabanSalah = 0;
     }
 
     private void Update()
@@ -255,10 +260,12 @@ public class BKTAlgorithm : MonoBehaviour
         if (isCorrect) //perbarui jika benar
         {
             knowledge = knowledge + (1 - knowledge) * pLearn;
+            jawabanBenar++;
         }
         else // perbarui jika salah
         {
             knowledge = knowledge * (1 - pGuess);
+            jawabanSalah++;
         }
     }
 
@@ -279,12 +286,19 @@ public class BKTAlgorithm : MonoBehaviour
         if (currentHealth <= 0)
         {
             losePanel.SetActive(true);
+            PlayerPrefs.SetInt("BKT Jawaban Benar", jawabanBenar);
+            PlayerPrefs.SetInt("BKT Jawaban Salah", jawabanBenar);
+
+            PlayerPrefs.SetInt("Jumlah Percobaan", PlayerPrefs.GetInt("Jumlah Percobaan") + 1);
+            PlayerPrefs.SetString($"Percobaan {PlayerPrefs.GetInt("Jumlah Percobaan")}", $"Mati di {selectedQuestion.gameObject.name}");
         }
         else
         {
             if (totalSoal >= 10)
             {
                 winPanel.SetActive(true);
+                PlayerPrefs.SetInt("BKT Jawaban Benar", jawabanBenar);
+                PlayerPrefs.SetInt("BKT Jawaban Salah", jawabanBenar);
             }
             else
             {
